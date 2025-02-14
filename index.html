@@ -1,0 +1,125 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CRUD System</h1>
+
+        <label>Course Name</label>
+        <input type="text" placeholder="Enter course name"  id="courcename">
+
+        <label>Course Category</label>
+        <input type="text" placeholder="Enter course category"  id="courcecategory">
+
+        <label>Course Price</label>
+        <input type="text" placeholder="Enter course price" id="courceprice">
+
+        <label>Course Description</label>
+        <textarea placeholder="Enter course description" id="courcediscription"></textarea>
+
+        <button onclick="addcource()">add cource</button>
+        <button    onclick="clearinput()" style="background-color: #dc3545;">Clear</button>
+
+        <input type="text" class="search-box" placeholder="Search...">
+
+        <table>
+            <thead>
+
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody  id="data">
+
+            </tbody>
+          
+          
+        </table>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
